@@ -8,8 +8,6 @@ const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
 const multer = require("multer");
 const path = require("path");
-
-const PORT = 5000;
 dotenv.config();
 
 app.use(express.json());
@@ -41,6 +39,12 @@ app.use("/api/user", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
-app.listen(process.env.PORT || PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
+app.use(express.static(path.join(__dirname, "/client/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/client/build", "index.html"));
+});
+
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Server is running`);
 });
