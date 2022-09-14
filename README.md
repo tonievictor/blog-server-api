@@ -3,7 +3,7 @@
 ## Description: 
 This API was built with Nodejs, Express, and MongoDB and it comes with the full functionality of a blog application. It contains a categories route, post route and users
 
-This Project also contains the Authentication Route that consists of all the Authentication with the following routes defined; the Sign Up Route that uses the Bycrypt Hashing Library to authenticate the Users password and json web token to authorize the User, the Login Route that ensures the User is authenticated before allowing the User to sign up.
+This Project also contains the Authentication Route that consists of all the Authentication with the following routes defined; the Sign Up Route that uses the Bycrypt Hashing Library to authenticate the Users password and json web token to authorize the User, the Login Route that ensures the User is authenticated before allowing the User to access the application.
 
 
 ## Live demo
